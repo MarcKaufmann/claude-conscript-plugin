@@ -18,11 +18,11 @@ If your skill says "load skill X for reference," don't repeat X's
 content. The model has it. Restating creates duplication that drifts
 when the original is updated.
 
-### 2. Match the existing style
-Read the other skills in the plugin before writing. Match their
-density, structure, and tone. If existing skills use flat numbered
-sections, don't introduce "Phase A / Phase B" labels. Caveat: if
-existing skills are poorly written, matching them propagates defects.
+### 2. Assess and match quality style
+Read the other skills in the plugin before writing. If unsure what
+style or quality to follow, ask or do a standalone analysis of the
+different styles present. Not all existing skills are worth emulating
+— identify the best-written ones and match those.
 
 ### 3. Don't over-script interviews
 If the skill needs to ask the user questions, state the intent ("learn
@@ -37,17 +37,7 @@ re-invoke. Caveat: if the setup requires user input that blocks
 further progress (e.g., a credential), pausing is legitimate.
 
 ### 5. Define jargon for newcomers
-If the skill's audience includes non-experts, define domain terms
-(e.g., "conscript," "bot model," "-with-admin variant"). Existing
-skills written by domain experts often omit these.
+If the skill's audience includes non-experts, define plugin-specific
+terms on first use. Domain experts who write skills often omit
+definitions that newcomers need.
 
-### 6. Separate reference from report
-Reference docs (.md) for tools to read should be dense and structured.
-Reports (.qmd) for humans to read should have prose and context. Don't
-write one document trying to serve both.
-
-### 7. Verify claims about frameworks
-Before writing "the framework can't do X," check the source code.
-The initial bot testing analysis incorrectly claimed bots can't read
-pages — they use Marionette/Firefox with full DOM access. Wrong claims
-in skills lead to wrong code.
