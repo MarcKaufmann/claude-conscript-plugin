@@ -41,3 +41,8 @@ If the skill's audience includes non-experts, define plugin-specific
 terms on first use. Domain experts who write skills often omit
 definitions that newcomers need.
 
+### 6. Verify claims about frameworks
+Before writing "the framework can't do X," check the source code.
+Wrong capability claims in skills lead to wrong code and misdirected
+development effort.
+
