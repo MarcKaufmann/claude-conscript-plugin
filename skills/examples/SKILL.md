@@ -7,18 +7,22 @@ user-invocable: false
 ---
 
 Read `study-config.md` in the project root for example repo paths.
+This file is created by `/create-study` on first use.
 
 ## Built-in congame examples
 
-In the congame repo under `conscript/examples/`:
+In the congame repo:
 
-| File | Pattern |
-|------|---------|
-| `kitchen-sink.rkt` | Full flow, forms, consent branching, nested study |
-| `form.rkt` | Minimal form with text + textarea |
-| `tutorial.rkt` (in `congame-doc/conscript-examples/`) | Simple survey with variable interpolation |
+| Location | Contents |
+|----------|----------|
+| `conscript/examples/` | Small focused examples: `kitchen-sink.rkt` (full flow, forms, consent branching, nested study), `form.rkt` (minimal form), `with-require.rkt` (external modules) |
+| `congame-example-study/` | Larger examples including conscript studies — look for files/folders starting with `conscript-` or files using `#lang conscript` |
+| `congame-doc/conscript-examples/` | `tutorial.rkt` (simple survey with variable interpolation) |
 
-## Pattern index
+## Search heuristics
+
+When you need one of these specific patterns, grep the example repos
+for these strings to find reference implementations:
 
 | Pattern | Search for |
 |---------|-----------|

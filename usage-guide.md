@@ -1,16 +1,41 @@
 # Claude Conscript Plugin — Usage Guide
 
-[Conscript](https://joeldueck.com/what-about/congame/Conscript.html) is
+[Conscript](https://docs.totalinsightmanagement.com/congame/Conscript.html) is
 a DSL for authoring online experiments, built on the
 [congame](https://github.com/MarcKaufmann/congame) framework. This
 plugin teaches Claude how to write, review, and deploy Conscript studies.
 
+## Prerequisites
+
+- **Racket** installed with congame packages (see
+  [congame docs](https://docs.totalinsightmanagement.com/congame/))
+- **A project directory** with study `.rkt` files (or an empty one to
+  start)
+- **Claude Code** — CLI, VS Code extension, or desktop app
+
 ## Setup
+
+### CLI
 
 ```bash
 cd ~/projects/your-study-project
 claude --plugin-dir ~/projects/claude-conscript-plugin
 ```
+
+### VS Code
+
+1. Install the [Claude Code extension](https://marketplace.visualstudio.com/items?itemName=anthropics.claude-code) from the VS Code marketplace
+2. Open your study project folder in VS Code
+3. Add the plugin path to your project's `.claude/settings.json`:
+   ```json
+   {
+     "plugins": ["~/projects/claude-conscript-plugin"]
+   }
+   ```
+4. Open the Claude Code panel in VS Code and use skills as normal
+
+VS Code is recommended for users who prefer a GUI — it provides an
+editor for `.rkt` files alongside Claude's output.
 
 ## Skills
 
@@ -47,4 +72,9 @@ steps, forms, variables, study flow, CSS, and a `-with-admin` variant
 - **Step:** One page — can show content, collect form input, or run logic
 - **`-with-admin` variant:** Every study needs one. It wraps the study
   with bot models so you can test it without clicking through manually.
-- **Bot models:** Automated test actors that fill forms and click buttons
+- **Bot models:** Automated test actors that drive a headless Firefox
+  browser via Marionette, filling forms and clicking buttons to verify
+  the study works.
+- **`study-config.md`:** Created by `/create-study` on first use. Stores
+  your project's domain, study patterns, and paths to example repos.
+  Read by Claude on every future `/create-study` invocation.
